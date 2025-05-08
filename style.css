@@ -1,0 +1,221 @@
+/* JAKI App Custom Styles */
+
+/* General Body Style (Streamlit handles most of this, but we can try to influence) */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f0f2f5; /* Light grey background for the page */
+}
+
+/* Main container for content sections */
+.main .block-container {
+    padding-top: 2rem; /* Add some space below the custom header */
+    padding-bottom: 2rem;
+}
+
+/* Custom Header Styling */
+.jaki-header {
+    background-color: #0A2540; /* Dark navy blue */
+    padding: 15px 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.jaki-header img.logo {
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.jaki-header .brand-name {
+    font-size: 28px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.jaki-header .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.jaki-header .nav-links a, .jaki-header .nav-links span {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.jaki-header .nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Page Titles */
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #0A2540; /* Match header color for consistency */
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #0A2540;
+}
+
+/* Card styling for content blocks */
+.stApp > div > div > div > div > section[data-testid="stFileUploadDropzone"],
+.stApp > div > div > div > div > div[data-testid="stForm"] {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+}
+
+/* File Uploader Specific Styling */
+/* Streamlit's file uploader is a bit tricky to style deeply with pure CSS */
+/* We can style the container it's in */
+.upload-container {
+    border: 2px dashed #00A693; /* Teal dashed border */
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.upload-container p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Button Styling */
+.stButton > button {
+    border-radius: 8px !important;
+    padding: 10px 20px !important;
+    font-weight: 500 !important;
+    border: none !important;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Primary Button (e.g., Submit, Upload) */
+.stButton > button[kind="primary"], .stButton > button.primary-button {
+    background-color: #00A693 !important; /* Teal color */
+    color: white !important;
+}
+.stButton > button[kind="primary"]:hover, .stButton > button.primary-button:hover {
+    background-color: #007A6B !important; /* Darker teal */
+}
+
+/* Secondary/Cancel Button */
+.stButton > button[kind="secondary"], .stButton > button.secondary-button {
+    background-color: #e0e0e0 !important; /* Light grey */
+    color: #333 !important;
+}
+.stButton > button[kind="secondary"]:hover, .stButton > button.secondary-button:hover {
+    background-color: #c7c7c7 !important; /* Darker grey */
+}
+
+/* Form Inputs */
+.stTextInput > div > div > input,
+.stTextArea > div > textarea,
+.stSelectbox > div > div > div {
+    border-radius: 6px !important;
+    border: 1px solid #ccc !important;
+}
+.stTextInput > div > div > input:focus,
+.stTextArea > div > textarea:focus,
+.stSelectbox > div > div > div:focus-within {
+    border-color: #00A693 !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 166, 147, 0.25) !important;
+}
+
+/* Progress Bar */
+.stProgressBar > div > div > div > div {
+    background-color: #00A693 !important; /* Teal color for progress */
+}
+
+/* Success Page Styling */
+.success-message-container {
+    text-align: center;
+    padding: 30px;
+}
+
+.success-message-container img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.success-message-container h3 {
+    color: #00A693; /* Teal color for success text */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.success-message-container p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Markdown specific adjustments for titles if needed */
+.custom-h2 {
+    text-align: center;
+    font-size: 24px; 
+    font-weight: 600;
+    color: #0A2540;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.custom-h3 {
+    text-align: center;
+    font-size: 20px; 
+    font-weight: 500;
+    color: #0A2540;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Styling for the form sections like 'Deskripsi Otomatis' */
+.form-section-label {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    display: block; /* Ensures it takes its own line */
+    color: #333;
+}
+
+/* Specific class for the main app container if Streamlit allows targeting */
+/* This is often difficult, so direct element styling is more common */
+
+/* Ensure images in forms are reasonably sized */
+.stImage > img {
+    border-radius: 8px;
+    margin-bottom: 15px;
+    max-width: 100%; /* Ensure it's responsive within its container */
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Center align buttons in columns if they are wrapped in a div */
+.stButton > button {
+    width: 100%; /* Make buttons in columns take full width of column */
+}
+
+/* Hide Streamlit's default hamburger menu and footer if desired (use with caution) */
+/* #MainMenu {visibility: hidden;} */
+/* footer {visibility: hidden;} */
+
