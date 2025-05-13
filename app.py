@@ -6,7 +6,7 @@ import db_utils # Our database utility module
 import time # For simulating progress
 
 # --- Configuration ---
-UPLOAD_DIR = "/home/ubuntu/jaki_app/uploads"
+UPLOAD_DIR = "uploads"
 LOGO_PATH = "/home/ubuntu/jaki_app/logo_jaki.png" # Assuming logo is in the same directory
 SUCCESS_IMAGE_PATH = "/home/ubuntu/jaki_app/success_icon.png" # Placeholder, replace with actual path if you have one
 ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg"}

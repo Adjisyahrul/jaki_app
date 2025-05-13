@@ -2,7 +2,7 @@
 import sqlite3
 import os
 
-DATABASE_DIR = "/home/ubuntu/jaki_app/database"
+DATABASE_DIR = "database" 
 DATABASE_PATH = os.path.join(DATABASE_DIR, "jaki_reports.db")
 
 def init_db():
