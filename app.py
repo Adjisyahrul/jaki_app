@@ -115,17 +115,17 @@ if not st.session_state.show_form and not st.session_state.submission_success:
         status_text.text("Upload Complete!")
         st.image(uploaded_file, width=200, use_column_width='auto')
         
-saved_path = save_uploaded_file(uploaded_file)
-        if saved_path:
-            st.session_state.image_path = saved_path
-            st.session_state.upload_complete = True
-            time.sleep(1)
-            st.session_state.show_form = True
-            st.rerun()
-        else:
-            st.session_state.error_message = "Gagal memproses file yang diunggah."
-            st.session_state.upload_complete = False
-            st.rerun()
+    saved_path = save_uploaded_file(uploaded_file)
+    if saved_path:
+        st.session_state.image_path = saved_path
+        st.session_state.upload_complete = True
+        time.sleep(1)
+        st.session_state.show_form = True
+        st.rerun()
+    else:
+        st.session_state.error_message = "Gagal memproses file yang diunggah."
+        st.session_state.upload_complete = False
+        st.rerun()
     
     if st.session_state.error_message:
         st.error(st.session_state.error_message)
